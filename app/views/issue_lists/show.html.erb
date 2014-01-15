@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div id="ISSUE-LIST-WINDOW">
+  <h1>Name:<%= @issue_list.name %></h1>
+
+  <input id="issue_headers_data" type="hidden" value="<%= @issue_list.headers.to_json %>">
+  <input id="issue_list_data" type="hidden" value="<%= @issue_list.to_json %>">
+  
+  <input type="button" value="ヘッダを追加" id="add_new_header_btn">
+
+  <div id="new_header_form" class="hide NEW-HEADER-FORM" >
+    <%= form_for Header.new do |f| %>
+
+      <%= f.hidden_field :issue_list_id, value: @issue_list.id %>
+      <%= f.text_field :key, placeholder: 'key' %>
+      <%= f.text_field :name , placeholder: 'name' %>
+      <%= f.submit '増やす' %>
+    <% end %>
+  </div>
+
+
+
+
+
+  <div id="issue_list"></div>
+
+  <span class="new_issue_btn">[+]</span>
+  <div id="new_issue"></div>
+
+
+
+  <%= link_to 'Edit', edit_issue_list_path(@issue_list) %> |
+  <%= link_to 'Back', issue_lists_path %>
+
+</div>
+<%= javascript_tag do %>
+  $(document).ready( function(){
+
+    App.generator.IssueListViewGenerator();
+
+  });
+
+<% end %>

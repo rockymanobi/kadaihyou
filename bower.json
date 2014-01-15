@@ -1,0 +1,9 @@
+{
+  "name": "issue_list",
+  "dependencies": {
+      "underscore": "latest",
+      "backbone": "latest",
+      "jquery": "1.10.2"
+  }
+}
+

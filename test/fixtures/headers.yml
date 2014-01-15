@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issue_list: 
+  key: MyString
+  name: MyString
+
+two:
+  issue_list: 
+  key: MyString
+  name: MyString

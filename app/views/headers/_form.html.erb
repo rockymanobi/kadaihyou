@@ -1,0 +1,29 @@
+<%= form_for(@header) do |f| %>
+  <% if @header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@header.errors.count, "error") %> prohibited this header from being saved:</h2>
+
+      <ul>
+      <% @header.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :issue_list %><br />
+    <%= f.text_field :issue_list %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

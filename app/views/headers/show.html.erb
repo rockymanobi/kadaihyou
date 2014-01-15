@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Issue list:</b>
+  <%= @header.issue_list %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @header.key %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @header.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_header_path(@header) %> |
+<%= link_to 'Back', headers_path %>

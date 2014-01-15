@@ -1,0 +1,13 @@
+<table>
+  <tr>
+<% for( var idx in options.headers ){ %>
+  <th><%= options.headers[idx].name %></th>
+<% } %>
+</tr>
+<tr>
+<% for( var idx in options.headers ){ %>
+  <td ><input class="issue-data" key="<%= options.headers[idx].key %>" type="text"></td>
+<% } %>
+</tr>
+</table>
+<input type="button" class="register-btn" value="登録">
